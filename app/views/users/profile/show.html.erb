@@ -9,10 +9,14 @@ at this point, we only have the creator reference, so:
 <h1> <%= @user.username %>'s events </h1>
 
 <ul>
-  <%= @events.each do |event| %>
-  <li>
-    <%= link_to event.title, event_path %> <br>
-    <em> <%= event.start %> </em>
-  </li>
+  <% unless @events.empty?%>
+    <%= @events.each do |event| %>
+    <li>
+      <%= link_to event.title, event_path %> <br>
+      <em> <%= event.start %> </em>
+    </li>
+    <% end %>
+  <% else %>
+    You have not created an event yet!
   <% end %>
 </ul>

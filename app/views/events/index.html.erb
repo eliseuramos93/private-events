@@ -1,5 +1,9 @@
 <% unless user_signed_in? %>
   <%= link_to "Log in", new_user_session_path %> | 
   <%= link_to "Sign up", new_user_registration_path %>
+<% else %>
+  Welcome, <%= current_user.username %>! <br>
+
+  <%= link_to "My profile", current_user %>
 <%end%>
 <h2>Next events on Eventosbrazuca</h2>
