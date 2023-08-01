@@ -1,0 +1,18 @@
+<!-- 
+"Have the User's Show page list all the events a user has CREATED"
+at this point, we only have the creator reference, so:
+
+@user = the owner of the current page's profile
+@events = all of the events created by the user
+-->
+
+<h1> <%= @user.username %>'s events </h1>
+
+<ul>
+  <%= @events.each do |event| %>
+  <li>
+    <%= link_to event.title, event_path %> <br>
+    <em> <%= event.start %> </em>
+  </li>
+  <% end %>
+</ul>
