@@ -1,0 +1,20 @@
+<h1> <%= @event.title %> </h1>
+<h2><em> Created by <%= @event.creator.username %> </em></h2>
+
+<div class="event-description">
+  <%= @event.description %>
+</div>
+
+<div class="event-info">
+  <ul>
+    <li>
+      Starts at: <%= @event.start %>
+    </li>
+    <li>
+      Ends at: <%= @event.end %>
+    </li>
+    <li>
+      Location: <%= @event.location %>
+    </li>
+  </ul>
+</div>
