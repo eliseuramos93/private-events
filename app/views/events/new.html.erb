@@ -1,31 +1,33 @@
 <h1>Create new event</h1>
 
-'<div class="form-container">
+<div class="form-container">
   <%= form_with model: @event do |form| %>
 
-  <ul>
-    <li>
-      <%= form.label "Event title:" %><br>
-      <%= form.text_field :title %>
-    </li>
-    <li>
-      <%= form.label :description %><br>
-      <%= form.text_area :decription %>
-    </li>
-    <li>
-      <%= form.label "Starts at:" %><br>
-      <%= form.datetime_local_field :start %>
-    </li>
-    <li>
-      <%= form.label "Ends at:" %><br>
-      <%= form.datetime_local_field :end %>
-    </li>
-    <li>
-      <%= form.label :location %><br>
-      <%= form.text_field :location %>
-    </li>
-    <li>
-      <%= form.submit %>
-    </li>
-  </ul>
+    <ul>
+      <li>
+        <%= form.label "Event title:" %><br>
+        <%= form.text_field :title %>
+      </li>
+      <li>
+        <%= form.label :description %><br>
+        <%= form.text_area :decription %>
+      </li>
+      <li>
+        <%= form.label "Starts at:" %><br>
+        <%= form.datetime_local_field :start %>
+      </li>
+      <li>
+        <%= form.label "Ends at:" %><br>
+        <%= form.datetime_local_field :end %>
+      </li>
+      <li>
+        <%= form.label :location %><br>
+        <%= form.text_field :location %>
+      </li>
+      <li>
+        <%= form.submit %>
+      </li>
+    </ul>
+
+  <% end %>
 </div>

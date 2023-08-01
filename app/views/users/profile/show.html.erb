@@ -8,6 +8,8 @@ at this point, we only have the creator reference, so:
 
 <h1> <%= @user.username %>'s events </h1>
 
+<%= link_to "Create new event", new_event_path %>
+
 <ul>
   <% unless @events.empty?%>
     <%= @events.each do |event| %>
@@ -20,3 +22,5 @@ at this point, we only have the creator reference, so:
     You have not created an event yet!
   <% end %>
 </ul>
+
+<%= link_to "Home page", root_path %>
